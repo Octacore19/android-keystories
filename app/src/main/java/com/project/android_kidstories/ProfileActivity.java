@@ -31,6 +31,8 @@ public class ProfileActivity extends AppCompatActivity {
                 if (response.isSuccessful()){
                     if (response.body() != null) {
                         User user = response.body().getData();
+                        String firstname = user.getFirstName();
+                        String lastname = user.getLastName();
                     }
                 }
             }
@@ -40,5 +42,9 @@ public class ProfileActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    private void updateUserProfile(){
+        
     }
 }
